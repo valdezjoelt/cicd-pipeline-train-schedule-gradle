@@ -14,6 +14,18 @@ node {
   download = true
 }
 
+task zip(type: Zip) {
+  from ('.') {
+    include "*"
+    include "bin/**"
+    include "data/**"
+    include "node_modiules/**"
+    include "public/**"
+    include "views/**"
+    include "routes/**"
+  }
+}
+
 task build
 
 build.dependsOn npm_build
