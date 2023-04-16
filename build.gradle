@@ -24,6 +24,7 @@ task zip(type: Zip) {
     include "views/**"
     include "routes/**"
   }
+  destinationDir(file("dist"))
 }
 
 task build
